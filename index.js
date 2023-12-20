@@ -7,8 +7,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const todoHandler = require('./routeHandler/todoHandler');
+const userHandler = require("./routeHandler/userHandler");
+const dotenv = require("dotenv");
 
 const app = express();
+dotenv.config()
 app.use(express.json());
 
 mongoose
@@ -17,6 +20,8 @@ mongoose
     .catch((err) => console.error('Error connecting to the database:', err));
 
 app.use('/todo', todoHandler);
+app.use("/user", userHandler);
+
 function errorHandler(err, req, res, next) {
     if (res.headersSent) {
         return next(err);

@@ -5,27 +5,32 @@ const router = express.Router();
 const todoSchema = require('../schemas/todoSchema');
 
 const Todo = new mongoose.model('Todo', todoSchema);
+const checkLogin = require("../middlewares/checkLogin");
 
 // GET ALL THE TODOS
-router.get('/', async (req, res) => {
+router.get("/", checkLogin, async (req, res) => {
     try {
-        const data = await Todo.find({ status: 'active' })
-            .select({
-                _id: 0,
-                __v: 0,
-                date: 0,
-            })
-            .exec();
-
-        res.status(200).json({
-            result: data,
-            message: 'Success',
-        });
+      console.log(req.username);
+      console.log(req.userId);
+  
+      const data = await Todo.find({ status: "active" })
+        .select({
+          _id: 0,
+          __v: 0,
+          date: 0,
+        })
+        .limit(2)
+        .exec();
+  
+      res.status(200).json({
+        result: data,
+        message: "Success",
+      });
     } catch (err) {
-        console.error(err);
-        res.status(500).json({
-            error: 'There was a server side error!',
-        });
+      console.error(err);
+      res.status(500).json({
+        error: "There was a server side error!",
+      });
     }
 });
 // GET A TODO by ID
