@@ -8,11 +8,13 @@ The To-Do Application is a web-based task management system designed to help use
 
 #### Key Features:
 
-1. **Task Create**
-2. **Task View**
-3. **Task Modification**
-4. **Task Deletion**
-5. **Authentication**
+1. **SignUp-Login System**
+2. **Token based Authentication**
+3. **Task Create**
+4. **Task View**
+5. **Task Modification**
+6. **Task Deletion**
+   
    
 #### Technology Stack:
 
