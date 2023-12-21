@@ -12,6 +12,7 @@ The To-Do Application is a web-based task management system designed to help use
 2. **Task View**
 3. **Task Modification**
 4. **Task Deletion**
+5. **Authentication**
    
 #### Technology Stack:
 
