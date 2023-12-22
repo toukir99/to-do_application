@@ -1,18 +1,18 @@
 
-### Project Title: To-Do Application
+### Project Title: REST API-based To-Do Application with JWT Authentication
 
 ### Project Description:
 
 #### Overview:
-The To-Do Application is a web-based task management system designed to help users organize their daily activities. It provides a user-friendly interface where users can create, view, update, and delete tasks.
+The To-Do Application, a task management system, is a robust Rest API that allows users to manage their CRUD operations like CREATE, READ, UPDATE, and DELETE. The application will be secured with JSON Web Token (JWT) authentication to ensure secure access to user-specific data.
 
 #### Key Features:
 
 1. **SignUp-Login System**
-2. **Token based Authentication**
+2. **JSON Web Token(JWT) based Authentication**
 3. **Task Create**
 4. **Task View**
-5. **Task Modification**
+5. **Task Update**
 6. **Task Deletion**
    
    
@@ -20,11 +20,13 @@ The To-Do Application is a web-based task management system designed to help use
 
 - **Backend:**
   - Node.js with Express for server-side development.
-  - MongoDB or another database for data storage.
 
 - **Database:**
   - MongoDB for a NoSQL database.
-
+    
+- **Authentication:**
+  - JWT authentication for secure user registration and login.
+    
 - **Version Control:**
   - Git for version control and collaboration.
 
